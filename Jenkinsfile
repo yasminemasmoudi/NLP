@@ -13,7 +13,7 @@ pipeline {
 	   }
 	   stage('Run Image') {
 	        steps {
-	        bat 'docker run -p 5000:8000 -d --name mynlp nlp-mlops:v1'
+	        bat 'docker run -p 5000:8000 -d --name nlp-mlops nlp-mlops:v1'
 	        }
 	   }
 	   stage('Testing'){
