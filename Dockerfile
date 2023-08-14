@@ -14,5 +14,4 @@ RUN python -m nltk.downloader punkt
 EXPOSE 8000
 
 ENTRYPOINT  ["python"]
-
 CMD ["app.py"]
