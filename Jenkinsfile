@@ -8,12 +8,12 @@ pipeline {
 	   }
 	   stage('Build Image') {
 	        steps {
-	        bat 'sudo docker build -t nlp-mlops:v1 .'
+	        bat 'docker build -t nlp-mlops:v1 .'
 	        }
 	   }
 	   stage('Run Image') {
 	        steps {
-	        bat 'sudo docker run -d -p 5000:8000 --name mynlp nlp-mlops:v1'
+	        bat 'docker run -d -p 5000:8000 --name mynlp nlp-mlops:v1'
 	        }
 	   }
 	   stage('Testing'){
